@@ -31,87 +31,85 @@ function getRandomPhrases(){
   environment = environmentTable[Math.floor(Math.random() * 18)];
   occurrence = occurrencesTable[Math.floor(Math.random() * 15)];
   item = itemsTable[Math.floor(Math.random() * 20)];
-  randomColor = Math.floor(Math.random()*16777215).toString(16);
   randomFont = Math.floor(Math.random() * 7);
 
   switch (environment){
     case "mountain":
-      gradientColor = "gray";
+      textColor = "#6B6C6B";
       intro = "High on the slopes of a great ";
     break;
 
     case "mountain range":
-      gradientColor = "gray";
+      textColor = "gray";
       intro = "In a beautiful valley of a great ";
     break;
 
     case "desert":
-      gradientColor = "yellow";
+      textColor = "#DA870E";
       intro = "Deep in the depths of a great ";
     break;
 
     case "tundra":
-      gradientColor = "white";
+      textColor = "#696F77";
       intro = "Deep in the icy expanse of a great ";
     break;
 
     case "glacier":
-      gradientColor = "#aad4e5";
+      textColor = "#279F9A";
       intro = "Near the towering ice wall of a great ";
     break;
 
     case "tropical island":
-      gradientColor = "yellow";
+      textColor = "#09641A";
       intro = "Near the beautiful shoreline of a great ";
     break;
 
     case "savannah":
-      gradientColor = "orange";
+      textColor = "#DA870E";
       intro = "Deeo in the depths of a great ";
     break;
 
     case "canyon":
-      gradientColor = "orange";
+      textColor = "#953D04";
       intro = "Deep in the depths of a great ";
     break;
 
     case "ocean":
-      gradientColor = "blue";
+      textColor = "#126E97";
       intro = "By the mighty shores of a great ";
     break;
 
     case "lake":
-      gradientColor = "blue";
+      textColor = "#174DA7";
       intro = "By the mighty shores of a great ";
     break;
 
     case "river":
-      gradientColor = "blue";
+      textColor = "#126E97";
       intro = "By the mighty shores of a great ";
     break;
 
     case "bay":
-      gradientColor = "blue";
+      textColor = "#174DA7";
       intro = "By the mighty shores of a great ";
     break;
 
     case "cave system":
-      gradientColor = "gray";
+      textColor = "#28312A";
       intro = "Deep in the depths of a great ";
     break;
 
     default:
-      gradientColor = "green";
+      textColor = "#033E0E";
       intro = "Deep in the depths of a great ";
   }
 
   document.getElementById('prompt_part_1').innerHTML = intro + environment + ", you encounter " + occurrence + ". ";
   document.getElementById('prompt_part_2').innerHTML = "On the ground nearby lies " + item + ".";
   document.getElementById("prompt").style.fontFamily = fontOptions[randomFont];
-  document.getElementById("prompt").style.color = "#" + randomColor;
-  document.getElementById("button").style.backgroundColor = gradientColor;
+  document.getElementById("prompt").style.color = textColor;
+  document.getElementById("button").style.backgroundColor = textColor;
 
-  var root = document.querySelector(':root');
-  var rootStyles = getComputedStyle(root);
-  root.style.setProperty('--grad', gradientColor);
+  environment = environment.replace(/\s/g, '-');
+  document.getElementById("page").style.backgroundImage = "linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url(images/" + environment + ".jpg)";
 }

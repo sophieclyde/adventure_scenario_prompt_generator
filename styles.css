@@ -1,5 +1,9 @@
-:root {
-  --grad: green;
+html {
+   min-height: 100%;
+   background-image: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), url("images/lake.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
 }
 
 h1 {
@@ -10,9 +14,9 @@ h1 {
 }
 
 body {
-  background:linear-gradient(to bottom, powderblue, var(--grad));
   background-attachment: fixed;
   text-align: center;
+  height: 100%;
 }
 
 p1 {

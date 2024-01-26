@@ -1,0 +1,85 @@
+:root {
+  --grad: green;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Papyrus", fantasy;
+  font-size: 64px;
+  font-style: normal; font-variant: normal;
+}
+
+body {
+  background:linear-gradient(to bottom, powderblue, var(--grad));
+  background-attachment: fixed;
+  text-align: center;
+}
+
+p1 {
+  font-size: 40px;
+}
+
+p2 {
+  font-size: 52px;
+  font-family: "Papyrus", fantasy;
+}
+
+button {
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  font-family: "Papyrus", fantasy;
+  background-color: #228B22;
+  border-radius: 8px;
+}
+
+.fade-in-text-title {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+
+.fade-in-text-prompt{
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.fade-in-text-next {
+  animation: fadeIn 8s;
+  -webkit-animation: fadeIn 8s;
+  -moz-animation: fadeIn 8s;
+  -o-animation: fadeIn 8s;
+  -ms-animation: fadeIn 8s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

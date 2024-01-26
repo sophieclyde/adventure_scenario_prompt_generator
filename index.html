@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body>
-    <h1>Hello World</h1>
-    <p>A description would go here but it's not here yet (I'm working on it).</p>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="body" onload="getRandomPhrases()">
+    <script src="main.js"></script>
+    <h1 class="fade-in-text-title">Let the adventure begin...</h1>
+    <div id="prompt" class="fade-in-text-prompt">
+      <p1 id="prompt_part_1"></p1>
+      <p1 id="prompt_part_2"></p1>
+    </div>
+    <br>
+    <div class="fade-in-text-next">
+      <p2>What will you do next?<br></p2>
+    </div>
+    <button id="button" type="button" onclick="getRandomPhrases()">Generate new prompt</button>
   </body>
 </html>
